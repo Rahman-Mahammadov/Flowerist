@@ -1,8 +1,8 @@
-import hamburger from "../assets/images/hamburger.png";
-import logo from "../assets/images/LOGO.png";
-import search1 from "../assets/images/Search 1.png";
-import cart from "../assets/images/cart.png";
-import closeButton from "../assets/images/Group 408.png";
+import hamburger from "/images/hamburger.png";
+import logo from "/images/LOGO.png";
+import search1 from "/images/Search 1.png";
+import cart from "/images/cart.png";
+import closeButton from "/images/Group 408.png";
 import { SearchModal, SignIn, Login, scrollToSection } from "../Components";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
@@ -21,6 +21,10 @@ const NavBar = () => {
   const cartClicked = useSelector((state) => state.cartClick.value);
   const [menuClick, setMenuClick] = useState(false);
   const navigate = useNavigate();
+
+  const closeHamburger = () => {
+    setMenuClick(!menuClick);
+  };
 
   useEffect(() => {
     const getBasketAmount = async () => {
@@ -70,7 +74,7 @@ const NavBar = () => {
           />
         </div>
 
-        <div className="max-lg:hidden">
+        <div className="max-lg:hidden ml-16">
           <Link to="/">
             <img src={logo} width={150} height={350} alt="hamburger" />
           </Link>
@@ -132,7 +136,7 @@ const NavBar = () => {
         >
           <div
             className="flex justify-end cursor-pointer"
-            onClick={() => setMenuClick(!menuClick)}
+            onClick={closeHamburger}
           >
             <img
               src={closeButton}
@@ -144,35 +148,81 @@ const NavBar = () => {
           </div>
           <hr />
           <ul className="flex flex-col justify-between gap-6 font-montserrat text-lg my-7 items-end">
-            <Link onClick={() => setShowSearchModal(!showSearchModal)}>
+            <Link
+              className="hover:scale-125 transition-all"
+              onClick={() => {
+                setShowSearchModal(!showSearchModal);
+                closeHamburger();
+              }}
+            >
               Search
             </Link>
-            <Link to="/" preventScrollReset={true}>
+            <Link
+              to="/"
+              preventScrollReset={true}
+              onClick={closeHamburger}
+              className="hover:scale-125 transition-all"
+            >
               Home
             </Link>
 
             <Link
+              className="hover:scale-125 transition-all"
               onClick={() => {
                 scrollToSection("list");
+                closeHamburger;
               }}
             >
               Catalog
             </Link>
             <Link
+              className="hover:scale-125 transition-all"
               to="/"
               onClick={() => {
                 scrollToSection("collections");
+                closeHamburger();
               }}
             >
               Collections
             </Link>
             <Link
+              className="hover:scale-125 transition-all"
               onClick={() => {
                 scrollToSection("address");
+                closeHamburger();
               }}
             >
               Contacts
             </Link>
+            {!userData ? (
+              <>
+                <p
+                  className="cursor-pointer hover:scale-125 transition-all"
+                  onClick={() => setShowLogin(!showLogin)}
+                >
+                  Log in
+                </p>
+
+                <p
+                  className="cursor-pointer hover:scale-125 transition-all"
+                  onClick={() => setShow(!show)}
+                >
+                  Sign up
+                </p>
+              </>
+            ) : (
+              <>
+                <p
+                  className="cursor-pointer"
+                  onClick={() => {
+                    localStorage.removeItem("userData");
+                    setLoggedOut(!loggedOut);
+                  }}
+                >
+                  Log out
+                </p>
+              </>
+            )}
           </ul>
         </div>
       </nav>

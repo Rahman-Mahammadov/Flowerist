@@ -1,8 +1,8 @@
-import logo from "../assets/images/LOGO.png";
-import cards from "../assets/images/cards.png";
-import social1 from "../assets/images/Vector.png";
-import social2 from "../assets/images/Vector (1).png";
-import social3 from "../assets/images/Vector (2).png";
+import logo from "/images/LOGO.png";
+import cards from "/images/cards.png";
+import social1 from "/images/Vector.png";
+import social2 from "/images/Vector (1).png";
+import social3 from "/images/Vector (2).png";
 
 const Footer = () => {
   return (

@@ -1,14 +1,13 @@
-import axios from "axios"
+import axios from "axios";
 
 export const instance = axios.create({
-    baseURL: "http://localhost:1337/api",
-})
+  baseURL: "https://flowerist-db-production.up.railway.app/api",
+});
 
 export const instance2 = axios.create({
-    baseURL: "http://localhost:1337/api",
-    headers: {
-        Authorization: "Bearer " + import.meta.env.VITE_API_TOKEN,
-        "Content-Type": "application/json",
-    },
-    
-})
+  baseURL: "https://flowerist-db-production.up.railway.app/api",
+  headers: {
+    Authorization: "Bearer " + import.meta.env.VITE_API_TOKEN,
+    "Content-Type": "application/json",
+  },
+});

@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import src from "../assets/images/flower1.png";
+import src from "/images/flower1.png";
 import { FlowerCard } from "../Components";
 
 const ProductsOnSale = () => {

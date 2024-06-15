@@ -1,5 +1,5 @@
-import modal from "../assets/images/modal.png";
-import modal1 from "../assets/images/modal1.png";
+import modal from "/images/modal.png";
+import modal1 from "/images/modal1.png";
 
 const Address = () => {
   return (

@@ -1,5 +1,5 @@
 import { Address, Subscribe, Footer} from "../Components";
-import polygon from "../assets/images/Polygon 4.png";
+import polygon from "/images/Polygon 4.png";
 
 const ContactUs = () => {
   return (

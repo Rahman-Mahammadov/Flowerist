@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { BlogList, ProductsOnSale } from "../Components";
 import { cartClicked } from "../app/cartClickSlicer";
-import trash from "../assets/images/Group 379@2x.png";
+import trash from "/images/Group 379@2x.png";
 import { toast } from "react-toastify";
 import { Button } from "../Components";
 import { useEffect, useState } from "react";

@@ -1,8 +1,8 @@
 import Blog from "./Blog";
-import blog5 from "../assets/images/blog5.jpg";
-import blog6 from "../assets/images/blog6.webp";
-import blog7 from "../assets/images/blog7.jpg";
-import blog8 from "../assets/images/blog8.jpeg";
+import blog5 from "/images/blog5.jpg";
+import blog6 from "/images/blog6.webp";
+import blog7 from "/images/blog7.jpg";
+import blog8 from "/images/blog8.jpeg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

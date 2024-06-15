@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import styles from "../Pages/payment.module.scss";
 import { Button } from "../Components";
-import success from "../assets/images/success.jpg"
+import success from "/images/success.jpg"
 
 export const PaymentSuccess = () => {
   const navigate = useNavigate();

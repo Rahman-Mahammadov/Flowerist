@@ -1,5 +1,5 @@
-import delivery from "../assets/images/Delivery.png";
-import basket from "../assets/images/basket.png";
+import delivery from "/images/Delivery.png";
+import basket from "/images/basket.png";
 
 const Delivery = () => {
   return (

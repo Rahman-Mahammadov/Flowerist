@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react";
-import cards from "../assets/images/image 13.png";
+import cards from "/images/image 13.png";
 import { Button } from "../Components";
 import { cartClicked } from "../app/cartClickSlicer";
 import { getUser } from "./Auth/login";
@@ -101,8 +101,8 @@ export default function VerticalyCentered({ show, setShow, id }) {
 
   return (
     <>
-      <TEModal show={show} setShow={setShow} >
-        <TEModalDialog centered size="md" >
+      <TEModal show={show} setShow={setShow}>
+        <TEModalDialog size="sm">
           <TEModalContent>
             <TEModalHeader>
               <button
@@ -157,26 +157,6 @@ export default function VerticalyCentered({ show, setShow, id }) {
                     <div className="flex justify-around gap-2 mt-4 items-start">
                       <span className="text-[15px] font-montserrat">Size</span>
                       <div className="flex flex-wrap gap-2 justify-center">
-                        {/* <div className="px-3 text-center  border-primary border-[1px] rounded-md w-[31%]">
-                          <p>small</p>
-                        </div>
-
-                        <div className=" text-center  font-montserrat   border-primary border-[1px] rounded-md w-[31%]">
-                          <p>medium</p>
-                        </div>
-
-                        <div className=" text-center  font-montserrat border-primary border-[1px] rounded-md w-[31%]">
-                          <p>large</p>
-                        </div>
-
-                        <div className=" text-center  font-montserrat border-primary border-[1px] rounded-md w-[31%]">
-                          <p>deluxe</p>
-                        </div>
-
-                        <div className=" text-center  font-montserrat border-primary border-[1px] rounded-md w-[31%]">
-                          <p>luxe</p>
-                        </div> */}
-
                         {sizes.map((s) => {
                           return (
                             <>

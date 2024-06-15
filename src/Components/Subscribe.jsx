@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import arrowRight from "../assets/images/arrowRight.png";
+import arrowRight from "/images/arrowRight.png";
 
 const Subscribe = () => {
   return (

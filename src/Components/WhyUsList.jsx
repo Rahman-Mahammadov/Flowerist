@@ -1,6 +1,6 @@
 import WhyUs from "./WhyUs";
-import icon1 from "../assets/images/whyus1.png";
-import icon2 from "../assets/images/whyus2.png";
+import icon1 from "/images/whyus1.png";
+import icon2 from "/images/whyus2.png";
 
 const WhyUsList = () => {
   return (

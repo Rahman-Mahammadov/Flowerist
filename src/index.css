@@ -50,3 +50,7 @@
     @apply sm:pb-24 pb-12;
   }
 }
+
+body {
+  overflow-x: hidden;
+}
